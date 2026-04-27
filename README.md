@@ -7,3 +7,5 @@ Each bank is compiled with a callable function to call internal functions.
 Once all of the banks are compiled, they must be concatenated together into a ROM file.
 
 There are 8 locations that can be used to share information across bank. They can either store bytes or words.
+
+You will need to download the [Tools repo](https://github.com/cdoty/Tools) and place it in a folder with the CateASCII-16Mapper folder.

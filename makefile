@@ -17,7 +17,7 @@ mameSystem	= cx5mu
 cpuTag		= :maincpu
 
 # Set the tools path.
-TOOLS_PATH	= ../../Tools
+TOOLS_PATH	= ../Tools
 
 # Set the CATE compiler path. Bin and lib are expected to exist inside the directory.
 CATE_PATH	= $(TOOLS_PATH)/Cate
