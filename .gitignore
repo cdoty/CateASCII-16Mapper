@@ -1,10 +1,7 @@
 .vscode/settings.json
 README.md.bak
-*.bin
-Bank00.symbols.txt
-Bank01.symbols.txt
-Bank02.symbols.txt
-Bank03.symbols.txt
+Bank*.bin
+*.symbols.txt
 *.obj
 *.lst
 *.rom
