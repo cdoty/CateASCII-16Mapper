@@ -4,7 +4,7 @@ The code was created because CATE lacks native support for banking and is a limi
 
 Location $4000-$7FFF is used as fixed bank 0 and location $8000-$BFFF is used for swappable banks. The tool abuses the zero segment feature of CATE to compile the fixed bank to zseg when compiling the additional banks. This is accomplished by compiling the fixed bank code with a wrapper file specifying cseg or zseg as the target.
 Each bank is compiled with a callable function to call internal functions.
-Once all of the banks are compiled, they must be concatenated together into a ROM file.
+Once all of the banks are compiled, they must be concatenated together into a ROM file, and padding to a set size.
 
 There are 8 locations that can be used to share information across bank. They can either store bytes or words.
 

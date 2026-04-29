@@ -7,6 +7,9 @@ extension	= rom
 # Set the console type, based on the directories in tms9918lib.
 console		= MSX
 
+# Set the output rom size
+romSize		= 131072
+
 # Set the ROM and RAM start addresses
 bank0seg	= 4000-7FFF
 cseg		= 8000-BFFF
@@ -97,6 +100,7 @@ all: $(name).$(extension)
 
 $(name).$(extension): Bank00.bin Bank01.bin Bank02.bin Bank03.bin
 	copy /Y /B Bank*.bin $@
+	$(TOOLS_PATH)/PadFile 255 $(romSize) $@
 #	$(TOOLS_PATH)/CreateComments $(mameSystem) $(cpuTag) Bank00.symbols.txt $(name).$(extension) ../../mame/comments
 #	$(TOOLS_PATH)/CreateSym Bank00.symbols.txt $(name).sym
 
