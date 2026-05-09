@@ -27,7 +27,7 @@ callBankFunction_:	public	callBankFunction_
 
 	ret
 
-setDefaultBank:	public setDefaultBank
+setupBanking:	public setupBanking
 	ld		a, 1							; Set current bank
 	ld		(currentBank), a
 

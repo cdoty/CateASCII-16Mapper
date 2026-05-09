@@ -8,7 +8,7 @@ ext setMode2
 ext	clearVRAM
 ext	setupInterrupt
 ext	callBankFunction_
-ext	setDefaultBank
+ext	setupBanking
 
 startup: public startup
 	ld		sp, StackStart
@@ -17,7 +17,7 @@ startup: public startup
 	call	clearRam			; Clear ram	
 	call	startupDelay		; Delay before starting
 	call	setupLibrary		; Setup library
-	call	setDefaultBank		; Set default bank
+	call	setupBanking		; Setup banking
 	
 	call	setMode2			; Set mode 2
 	call	clearVRAM			; Clear VRAM
