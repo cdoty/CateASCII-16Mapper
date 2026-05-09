@@ -31,25 +31,27 @@ LIB_PATH	= $(CATE_PATH)/lib
 compileType	= 80
 
 # Customize the processor type and the TMS-9918 interface type, if needed.
+SystemC_S	= SystemLib/$(console)/crt0/C/Ascii16.s
+SystemC_S	+= $(wildcard System/C/*.s)
+
 SharedC_S	= SystemLib/Z80/Decompression/IO/C/BitBusterDepackIRQ.s
+SharedC_S	+= $(wildcard SystemLib/$(console)/C/*.s)
+SharedC_S	+= $(wildcard SystemLib/$(console)/Bank/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/Z80/Graphics/IO/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/Z80/Graphics/Sprites/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/Z80/Shared/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/Z80/Sound/IO/AY38910/C/*.s)
 
-SystemC_S	= SystemLib/$(console)/crt0/C/Ascii16.s
-SystemC_S	+= $(wildcard SystemLib/$(console)/C/*.s)
-SystemC_S	+= $(wildcard System/C/*.s)
+SystemZ_S	= SystemLib/$(console)/crt0/Z/Ascii16.s
+SystemZ_S	+= $(wildcard System/Z/*.s)
 
 SharedZ_S	= SystemLib/Z80/Decompression/IO/Z/BitBusterDepackIRQ.s
+SharedZ_S	+= $(wildcard SystemLib/$(console)/Z/*.s)
+SharedZ_S	+= $(wildcard SystemLib/$(console)/Bank/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/Z80/Graphics/IO/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/Z80/Graphics/Sprites/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/Z80/Shared/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/Z80/Sound/IO/AY38910/Z/*.s)
-
-SystemZ_S	= SystemLib/$(console)/crt0/Z/Ascii16.s
-SystemZ_S	+= $(wildcard SystemLib/$(console)/Z/*.s)
-SystemZ_S	+= $(wildcard System/Z/*.s)
 
 Bank1_C		= $(wildcard Bank1/*.c)
 Bank1_ASM	= Bank1/BankTable.asm
